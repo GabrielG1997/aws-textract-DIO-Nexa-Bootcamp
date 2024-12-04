@@ -3,6 +3,21 @@ A example project created with JAVA to demonstrate the AWS textract functionalit
 
 ## This output has used the samples provided by AWS for JAVA that can be found on [examples AWS](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javav2/example_code/textract/src/main/java/com/example/textract/AnalyzeDocument.java)
 
+
+## Use Cases
+I can see some use cases for this kind of solutions inside LIMS Systems, they're:
+
+- Instrument Integrations
+ - Some instruments generate only PDF files as output, using textract allows LIMS to interprete the PDF file and extract it data, parsing the results automatically to LIMS following the best practices of compliance.
+ - Some instruments don't generate an output file that can be imported via network to the LIMS, like some kind of balances and ph meters, but the data is displayed to the user usually in a screen, user can take a picture and send this picture to be analyzed and get the results parsed automatically to LIMS.
+
+- Dinamic Data creation: Samples, Batches, products, and instruments can be created based on a pdf or image.
+
+- Pacients can be automatically registered, and their Consent forms can be automatically filled on BIOBANK LIMS after pacients fill them and take a picture or digitalize it.
+
+
+## Details
+
 This repo only contains the image processed and the output after execute the action AnalyzeDocument changing the doc source path to a local path.
 
 I've also changed the print function to print the lines' text instead of the blocktype as it was on the original version of the code provided by AWS.
